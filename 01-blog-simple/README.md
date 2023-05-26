@@ -12,13 +12,13 @@ Posts service and Comments service have own store their entity post-entity and c
 *Initial App*
 ![Initial application](initial-app.png)
 
-*Service tasks*
-![Serivce tasks](posts-comments-services.png)
-
 *App tasks*
 ![Alt text](blog-app.png)
 
-## Folder stuctures
+*Service tasks*
+![Serivce tasks](posts-comments-services.png)
+
+## Folder structures
 - /posts contain Express app for posts service entity run on port :4000
 - /comments contain Express app for comments service entity run on port :4001
 - /client contain React app for UI run on port :3000
@@ -37,4 +37,4 @@ cd client && npm install && npm start
 
 ```
 
-Open web browser to [http://localhost:3000](https://localhost:3000).
+Open web browser to [http://localhost:3000](https://localhost:3000)
