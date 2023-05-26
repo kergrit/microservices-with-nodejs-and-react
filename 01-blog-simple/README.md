@@ -19,22 +19,30 @@ Posts service and Comments service have own store their entity post-entity and c
 ![Serivce tasks](posts-comments-services.png)
 
 ## Folder structures
-- /posts contain Express app for posts service entity run on port :4000
-- /comments contain Express app for comments service entity run on port :4001
-- /client contain React app for UI run on port :3000
+- `/posts` contain Express app for posts service entity run on `port:4000`
+- `/comments` contain Express app for comments service entity run on `port:4001`
+- `/client` contain React app for UI run on `port:3000`
 
 
 ## How to run example
 ```sh
-# Posts service [port 4000]
+# Posts service [port:4000]
 cd posts && npm install && npm start
 
-# Comments service [port 4001]
+# Comments service [port:4001]
 cd comments && npm install && npm start
 
-# React Apps
+# React Apps [port:3000]
 cd client && npm install && npm start
 
 ```
 
 Open web browser to [http://localhost:3000](https://localhost:3000)
+
+# 
+*Test scenario*
+- Add first post
+- Add first comment and second comment
+- Reload web browser and see results
+- Kill comment service with `ctrl+c`
+- Reload web browser and see results (app `crash!` can't display comment data)
