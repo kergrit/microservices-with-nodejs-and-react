@@ -4,7 +4,7 @@ In this section we will learn about simple React application used Posts service,
 
 Posts service, Comments service and Query service have own store their entity post-entity, comment-entity and post-comment-entity (changes some entity data structure for Moderation service)
 
-Moderation service not store any entity also update comment status with `pending` `approved` and `reject` from event bus on `commentCreated` after finish moderated this service send `commentModerated` to event bus
+Moderation service not store any entity also update comment status with `pending` `approved` and `rejected` from event bus on `commentCreated` after finish moderated this service send `commentModerated` to event bus
 
 Event Bus lists
 - `postCreated` triggered on post item was created
@@ -30,7 +30,7 @@ Event Bus lists
 - User add new comment form UI
 - `Comment service` create comment entity with `pending` status. Then create & send `commentCreated` event to Event Bus
 - `Query service` receive `commentCreated` event and create post-comment entity.
-- `Moderation service` receive `commentCreated` event and checking bad word in content and update status to `approve` or `reject`. Next create & send `commentModerated` event to Event Bus
+- `Moderation service` receive `commentCreated` event and checking bad word in content and update status to `approved` or `rejected`. Next create & send `commentModerated` event to Event Bus
 - `Comment service` receive `commentModerated` event and update own comment entity. Then create & send `commentUpdated` event to Event Bus
 - `Query service` receive `commentUpdated` event and update own post-comment entity
 
