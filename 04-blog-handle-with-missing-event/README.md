@@ -2,13 +2,13 @@
 
 In this section we will learn about simple React application used Posts service, Comments service, Moderation service and Query service with `Event Bus` service communitcation between services.
 
-In real-world of microservices we will found situation some service out of service and missing recive event from Event Bus. In this section make `Query Service` is out of service and missing receive `postCreated` and `commentCreated` from Event Bus. Then restart `Query Service` after create post and comment. You can see how to handle and sync missing event in `Query Service`.
+In real-world of microservices we will found situation some service out of service and missing recive event from Event Bus. In this section make `Query Service` is out of order and missing receive `postCreated` and `commentCreated` from Event Bus. Then restart `Query Service` after create post and comment. You can see how to handle and sync missing event in `Query Service`.
 
 ## Application overview
 *Problem: Query service out of order*
 ![Problem](problem.png)
 
-*Solution: Event Bus datastore*
+*Solution: Event Bus data store*
 ![Solution](solution.png)
 ## Folder structures
 - `/posts` contain Express app for posts service entity run on `port:4000`
