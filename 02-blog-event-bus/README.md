@@ -51,7 +51,7 @@ cd client && npm install && npm start
 
 ```
 
-Open web browser to [http://localhost:3000](https://localhost:3000)
+Open web browser to [http://localhost:3000](http://localhost:3000)
 
 # 
 *Test scenario*
