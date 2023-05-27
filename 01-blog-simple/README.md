@@ -45,4 +45,4 @@ Open web browser to [http://localhost:3000](https://localhost:3000)
 - Add first comment and second comment
 - Reload web browser and see results
 - Kill comment service with `ctrl+c`
-- Reload web browser and see results (app `crash!` can't display comment data)
+- Reload web browser and see results (app `crash!` can't display comment data) 
