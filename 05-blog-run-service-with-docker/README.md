@@ -10,13 +10,13 @@ In this section we will learn about wrap all service with docker
 
 
 Apply .dockerignore and Dockerfile to all services
-```docker
+```sh
 # .dockerignore
 node_modules
 package-lock.json
 ```
 
-```docker
+```dockerfile
 # Dockerfile
 FROM node:alpine
 
