@@ -57,7 +57,16 @@ cd moderation && docker build -t kergrit/05-blog-moderation . && docker run -it 
 cd client && docker build -t kergrit/05-blog-client . && docker run -it kergrit/05-blog-client
 
 ```
-** Remark we not yet expose port this is a only simple dockerizing you can't open browser to test scenario **
+** Remark we not yet expose port this is a only simple dockerizing **
+
+*Test scenario*
+
+Run docker image `kergrit/05-blog-client` with publish `port:3000`
+```sh
+docker run -d -p 3000:3000 kergrit/05-blog-client
+```
+Open web browser to [http://localhost:3000](http://localhost:3000)
+
 
 # 
 Docker command
@@ -65,6 +74,9 @@ Docker command
 # Docker build image
 docker build -t {image-name}:{version} .
 
-# Docker run image
+# Docker run image with input-output terminal
 docker run -it {image-name}:{version}
+
+# Docker run image with detach(background) and publish port
+docker run -d -p {hostPort:containerPort} {image-name}:{version}
 ```
