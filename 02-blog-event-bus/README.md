@@ -34,8 +34,8 @@ Posts service, Comments service and Query service have own store their entity po
 
 ## How to run example
 ```sh
-# Posts service [port:4005]
-cd query-bus && npm install && npm start
+#  Event Bus [port:4005]
+cd event-bus && npm install && npm start
 
 # Posts service [port:4000]
 cd posts && npm install && npm start
