@@ -43,7 +43,7 @@ cd posts && npm install && npm start
 # Comments service [port:4001]
 cd comments && npm install && npm start
 
-# Comments service [port:4002]
+# Query service [port:4002]
 cd query && npm install && npm start
 
 # React Apps [port:3000]
