@@ -10,6 +10,44 @@ In real-world of microservices we will found situation some service out of servi
 
 *Solution: Event Bus data store*
 ![Solution](solution.png)
+
+Event Bus (apply event data store)
+```js
+// ./event-bus/index.js
+const events = [];
+
+app.post("/events", (req, res) => {
+  const event = req.body;
+
+  events.push(event);
+  ...
+});
+
+app.get("/events", (req, res) => {
+  res.send(events);
+});
+```
+
+Query service (handle event bus data store) 
+```js
+// ./query/index.js 
+app.listen(4002, async () => {
+  console.log("Listening on 4002");
+  
+  try {
+    const res = await axios.get("http://localhost:4005/events");
+
+    for (let event of res.data) {
+      console.log("Processing event:", event.type);
+
+      handleEvent(event.type, event.data);
+    }
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+```
+
 ## Folder structures
 - `/posts` contain Express app for posts service entity run on `port:4000`
 - `/comments` contain Express app for comments service entity run on `port:4001`
