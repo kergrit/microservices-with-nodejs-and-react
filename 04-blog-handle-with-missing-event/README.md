@@ -1,4 +1,4 @@
-# 04-blog-deal-with-missing-event
+# 04-blog-handle-with-missing-event
 
 In this section we will learn about simple React application used Posts service, Comments service, Moderation service and Query service with `Event Bus` service communitcation between services.
 
