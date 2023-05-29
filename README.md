@@ -8,3 +8,4 @@ This repo is example collections for learn about microservices design developeme
 - [04-blog-handle-with-missing-event](04-blog-handle-with-missing-event) update blog app with handle and manage on service missing event
 #
 - [05-blog-run-service-with-docker](05-blog-run-service-with-docker) Dockerizing blog app
+- [06-blog-kubernetes-101](06-blog-kubernetes-101) Orchesting blog app with Kubernetes 101
