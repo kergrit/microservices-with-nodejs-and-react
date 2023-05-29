@@ -79,4 +79,14 @@ docker run -it {image-name}:{version}
 
 # Docker run image with detach(background) and publish port
 docker run -d -p {hostPort:containerPort} {image-name}:{version}
+
+# Docker print out information about all of the running containers
+docker ps
+
+# Docker execute the given command in a running container
+docker exec -it {containerID} {command}
+
+# Docker print out logs from the given container
+docker log {containerID}
+
 ```
