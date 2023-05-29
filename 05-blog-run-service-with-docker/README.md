@@ -99,6 +99,6 @@ docker ps
 docker exec -it {containerID} {command}
 
 # Docker print out logs from the given container
-docker log {containerID}
+docker logs {containerID}
 
 ```
