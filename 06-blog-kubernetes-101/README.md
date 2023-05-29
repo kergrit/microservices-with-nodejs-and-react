@@ -178,3 +178,32 @@ kubectl get pods
 kubectl logs posts-deployment-c68469c7-4h8cf && \
 kubectl logs event-bus-deployment-5c67958f49-jg57r
 ```
+# 
+Kubernetes command
+```sh
+# Create/update K8s with configuration (pods,deployments and services)
+kubectl apply -f {configFile}
+kubectl apply -f {FolderOfConfigFile}
+
+# Delete K8s with configuration (pods,deployments and services)
+kubectl delete -f {configFile}
+kubectl delete -f {FolderOfConfigFile}
+
+# Delete K8s with type and name
+kubectl delete {pod|deployment|service} {podName|deploymentName|serviceName}
+
+# Describe K8s with type and name
+kubectl describe {pod|deployment|service} {podName|deploymentName|serviceName}
+
+# Listing K8s with type
+kubectl get {pods|deployments|services}
+
+# Execute command on some pod
+kubectl exec -it {podName} {command}
+
+# Print logs on some pod
+kubectl logs {podName}
+
+# Get minikube ip (VM)
+minikube ip
+```
