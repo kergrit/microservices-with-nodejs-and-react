@@ -137,6 +137,17 @@ let post_service_endpoint = 'http://posts-service-clusterip:4000';
 let event_bus_service_endpoint = 'http://event-bus-service-clusterip:4005';
 ```
 
+## Folder structures
+- `/posts` contain Express app for posts service entity run on `port:4000`
+- `/comments` contain Express app for comments service entity run on `port:4001`
+- `/query` contain Express app for Query service entity run on `port:4002`
+- `/moderation` contain Express app for Moderation service entity run on `port:4003`
+- `/event-bus` contain Express app for `Event Bus` to collect event run on `port:4005`
+- `/client` contain React app for UI run on `port:3000`
+- `/infra/k8s-simple` contain configuration file for K8s
+
+## How to run example
+
 ```sh
 // Build & push event-bus image to docker hub
 cd event-bus && \
