@@ -39,22 +39,34 @@ CMD ["npm", "start"]
 ## How to run example
 ```sh
 # Event Bus [port:4005]
-cd event-bus && docker build -t kergrit/05-blog-event-bus . && docker run -it kergrit/05-blog-event-bus
+cd event-bus && \ 
+docker build -t kergrit/05-blog-event-bus . && \
+docker run -it kergrit/05-blog-event-bus
 
 # Posts service [port:4000]
-cd posts && docker build -t kergrit/05-blog-posts . && docker run -it kergrit/05-blog-posts
+cd posts && \
+docker build -t kergrit/05-blog-posts . && \
+docker run -it kergrit/05-blog-posts
 
 # Comments service [port:4001]
-cd comments && docker build -t kergrit/05-blog-comments . && docker run -it kergrit/05-blog-comments
+cd comments && \
+docker build -t kergrit/05-blog-comments . && \
+docker run -it kergrit/05-blog-comments
 
 # Query service [port:4002]
-cd query && docker build -t kergrit/05-blog-query . && docker run -it kergrit/05-blog-query
+cd query && \
+docker build -t kergrit/05-blog-query . && \
+docker run -it kergrit/05-blog-query
 
 # Moderation service [port:4003]
-cd moderation && docker build -t kergrit/05-blog-moderation . && docker run -it kergrit/05-blog-moderation
+cd moderation && \
+docker build -t kergrit/05-blog-moderation . && \
+docker run -it kergrit/05-blog-moderation
 
 # React Apps [port:3000]
-cd client && docker build -t kergrit/05-blog-client . && docker run -it kergrit/05-blog-client
+cd client && \
+docker build -t kergrit/05-blog-client . && \
+docker run -it kergrit/05-blog-client
 
 ```
 ** Remark we not yet expose port this is a only simple dockerizing **

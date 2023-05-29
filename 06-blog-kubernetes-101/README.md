@@ -92,7 +92,10 @@ spec:
 ```
 ```sh
 // Testing
-cd infra/k8s-simple && kubectl apply -f posts-deployment.yaml && kubectl apply -f posts-service-nodeport.yaml && kubectl get services
+cd infra/k8s-simple && \
+kubectl apply -f posts-deployment.yaml && \
+kubectl apply -f posts-service-nodeport.yaml && \
+kubectl get services
 
 // Accessing NodePort example 192.168.64.10:30614
 minikube ip
@@ -136,13 +139,21 @@ let event_bus_service_endpoint = 'http://event-bus-service-clusterip:4005';
 
 ```sh
 // Build & push event-bus image to docker hub
-cd event-bus && docker build -t kergrit/06-blog-event-bus:simple . && docker push kergrit/06-blog-event-bus:simple
+cd event-bus && \
+docker build -t kergrit/06-blog-event-bus:simple . && \
+docker push kergrit/06-blog-event-bus:simple
 
 // Deployment
-cd infra/k8s-simple && kubectl apply -f posts-deployment.yaml && kubectl apply -f event-bus-deployment.yaml && kubectl get deployments
+cd infra/k8s-simple && \
+kubectl apply -f posts-deployment.yaml && \
+kubectl apply -f event-bus-deployment.yaml && \
+kubectl get deployments
 
 // Service
-cd infra/k8s-simple && kubectl apply -f posts-service-clusterip.yaml && kubectl apply -f event-bus-service-clusterip.yaml && kubectl get services
+cd infra/k8s-simple && \
+kubectl apply -f posts-service-clusterip.yaml && \
+kubectl apply -f event-bus-service-clusterip.yaml && \
+kubectl get services
 ```
 
 *Test scenario (Test connection with Postman)*
@@ -164,6 +175,6 @@ kubectl get pods
 ```
 - See result with `kubectl logs`
 ```sh 
-kubectl logs posts-deployment-c68469c7-4h8cf && 
+kubectl logs posts-deployment-c68469c7-4h8cf && \
 kubectl logs event-bus-deployment-5c67958f49-jg57r
 ```
