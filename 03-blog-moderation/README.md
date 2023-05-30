@@ -15,16 +15,16 @@ Event Bus lists
 ## Application overview
 
 *Project UI*
-![Alt text](project-ui.png)
+![Alt text](assets/images/project-ui.png)
 
 *Feature detail*
-![Feature deatail](feature.png)
+![Feature deatail](assets/images/feature.png)
 
 *Event Bus Routes*
-![Event Bus Routes](event-bus-routes.png)
+![Event Bus Routes](assets/images/event-bus-routes.png)
 
 *Event Bus Data*
-![Alt text](event-bus-data.png)
+![Alt text](assets/images/event-bus-data.png)
 
 *Event Bus Flow*
 - User add new comment form UI
