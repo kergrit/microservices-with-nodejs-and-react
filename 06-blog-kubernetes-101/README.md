@@ -6,15 +6,15 @@ Start section with simple knowledge what is kubernetes and how it work.
 
 ## What is Kubernetes (Kube or K8S)
 *What is K8S?*
-![What is K8S](what-is-k8s.png)
+![What is K8S](assets/images/what-is-k8s.png)
 
 *Kubernetes Terms*
-![K8S Terms](k8s-terms.png)
+![K8S Terms](assets/images/k8s-terms.png)
 
 
 *Pod Term - Config file*
-![Pod config file](pod-term.png)
-![Alt text](pod-start.png)
+![Pod config file](assets/images/pod-term.png)
+![Pod start](assets/images/pod-start.png)
 Simple kubernetes Pod config
 ```yaml
 # infra/k8s-simple/posts-pod.yaml
@@ -43,10 +43,10 @@ kubectl get pods
 ```
 
 *Pod Term - Docker world vs Kubernetes world*
-![Pod command](docker-vs-k8s-world.png)
+![Pod command](assets/images/docker-vs-k8s-world.png)
 
 *Deployment Term*
-![Deploymen term](deployment-term.png)
+![Deploymen term](assets/images/deployment-term.png)
 
 Simple kubernetes Deployment config
 ```yaml
@@ -78,10 +78,10 @@ kubectl get deployments
 ```
 
 *Service Term*
-![Service term](service-term.png)
+![Service term](assets/images/service-term.png)
 
 *Service Term - Node Port*
-![Alt text](service-clusterip-nodeport.png)
+![Alt text](assets/images/service-clusterip-nodeport.png)
 
 Simple kubernetes Service config (NodePort)
 ```yaml
@@ -111,7 +111,7 @@ minikube ip
 Open web browser to http://192.168.64.10:30614/posts
 
 *Service Term - ClusterIP*
-![Alt text](service-clusterip.png)
+![Alt text](assets/images/service-clusterip.png)
 Simple kubernetes Service config (ClientIP)
 ```yaml
 # infra/k8s-simple/posts-service-clusterip.yaml
