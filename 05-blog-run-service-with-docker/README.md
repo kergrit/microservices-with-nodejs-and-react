@@ -6,7 +6,7 @@ In this section we will learn about wrap all service with docker
 
 ## Application overview
 *Dockerizing*
-![Dockerizing](dockerizing.png)
+![Dockerizing](assets/images/dockerizing.png)
 
 
 Apply .dockerignore and Dockerfile to all services
