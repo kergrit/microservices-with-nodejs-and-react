@@ -7,16 +7,16 @@ Posts service and Comments service have own store their entity post-entity and c
 ## Application overview
 
 *Our App UI*
-![Our application UI](project-ui.png)
+![Our application UI](assets/images/project-ui.png)
 
 *Initial App*
-![Initial application](initial-app.png)
+![Initial application](assets/images/initial-app.png)
 
 *App tasks*
-![Alt text](blog-app.png)
+![Alt text](assets/images/blog-app.png)
 
 *Service tasks*
-![Serivce tasks](posts-comments-services.png)
+![Serivce tasks](assets/images/posts-comments-services.png)
 
 ## Folder structures
 - `/posts` contain Express app for posts service entity run on `port:4000`
