@@ -2,6 +2,9 @@
 
 In latest section we will learn about simple orchesting blog app with `Kubernetes` with `Load Balancer` and `Ingress`. 
 
+*Repeat updating image and deployment VS Skaffold*
+![Alt text](assets/images/k8s-tasks.png)
+
 Everytime we update codebase for development in project that often tasks will todo:
 - Build & Push docker image to docker hub
 - Restart deployment wiht `kubectl rollout restart deployment {deploymentName}`
