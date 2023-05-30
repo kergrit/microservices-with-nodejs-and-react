@@ -6,22 +6,22 @@ Posts service, Comments service and Query service have own store their entity po
 
 ## Application overview
 *Event Bus is*
-![What is event bus](what-is-event-bus.png)
+![What is event bus](assets/images/what-is-event-bus.png)
 
 *postCreated Event*
-![Event bus example](event-bus-example.png)
+![Event bus example](assets/images/event-bus-example.png)
 
 *Event Bus Flows*
-![Event Bus Flow](event-bus-post-comment.png)
+![Event Bus Flow](assets/images/event-bus-post-comment.png)
 
 *Event Bus Implementations*
-![Event Bus Routes](event-bus-routes.png)
+![Event Bus Routes](assets/images/event-bus-routes.png)
 
 *Query service tasks*
-![Query service](query-service.png)
+![Query service](assets/images/query-service.png)
 
 *Update get posts+comments entity from Query service*
-![Get posts entity from Query service](update-get-posts-on-query-service.png)
+![Get posts entity from Query service](assets/images/update-get-posts-on-query-service.png)
 
 
 ## Folder structures
