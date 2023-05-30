@@ -31,7 +31,7 @@ spec:
 ```
 
 ```sh
-// Docker build image 
+// Docker build & push image 
 cd posts && \
 docker build -t kergrit/06-blog-posts:simple . && \
 docker push kergrit/06-blog-posts:simple \
