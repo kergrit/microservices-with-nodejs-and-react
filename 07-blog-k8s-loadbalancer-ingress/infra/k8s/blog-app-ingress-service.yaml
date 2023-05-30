@@ -1,0 +1,47 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: default
+  name: blog-app-ingress
+  labels:
+    name: blog-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"  
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - blog.app
+    secretName: blog-app-tls
+  rules:
+  - host: blog.app    
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/posts/create"
+        backend:
+          service:
+            name: posts-service-clusterip
+            port: 
+              number: 4000
+      - pathType: Prefix
+        path: "/posts/?(.*)/comments"
+        backend:
+          service:
+            name: comments-service-clusterip
+            port: 
+              number: 4001
+      - pathType: Prefix
+        path: "/posts"
+        backend:
+          service:
+            name: query-service-clusterip
+            port: 
+              number: 4002
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: client-service-clusterip
+            port: 
+              number: 3000
