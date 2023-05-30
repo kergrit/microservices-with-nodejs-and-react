@@ -23,7 +23,7 @@ Next if we want to outside world can access another `Services` (Pods) how we do?
 
 > **!! Every changes** codebase you must rebuild docker image and push to docker hub and run `kubectl rollout restart deployment {deploymentName}` for updating K8s deployment. 
   - *Question*: What tool will help us automately this tasks on tasks development process. 
-  - *Answer*: `Scaffold`
+  - *Answer*: `skaffold`
 
 With `nginx-ingress` for K8s you can deploy multiple domain or apps to single K8s cluster 
 
