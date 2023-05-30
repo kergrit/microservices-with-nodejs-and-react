@@ -6,10 +6,10 @@ In real-world of microservices we will found situation some service out of servi
 
 ## Application overview
 *Problem: Query service out of order*
-![Problem](problem.png)
+![Problem](assets/images/problem.png)
 
 *Solution: Event Bus data store*
-![Solution](solution.png)
+![Solution](assets/images/solution.png)
 
 Event Bus (apply event data store)
 ```js
