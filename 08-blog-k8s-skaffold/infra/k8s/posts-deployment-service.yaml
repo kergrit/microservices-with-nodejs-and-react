@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: posts
-        image: kergrit/07-blog-posts
+        image: kergrit/08-blog-posts
 ---        
 apiVersion: v1
 kind: Service

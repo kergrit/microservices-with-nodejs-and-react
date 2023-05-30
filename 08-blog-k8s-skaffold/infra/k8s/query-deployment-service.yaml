@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: query
-        image: kergrit/07-blog-query
+        image: kergrit/08-blog-query
 ---
 apiVersion: v1
 kind: Service

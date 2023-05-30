@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: client
-        image: kergrit/07-blog-client
+        image: kergrit/08-blog-client
 ---
 apiVersion: v1
 kind: Service

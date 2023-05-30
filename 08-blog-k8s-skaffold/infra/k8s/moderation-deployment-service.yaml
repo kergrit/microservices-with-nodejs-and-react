@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: moderation
-        image: kergrit/07-blog-moderation
+        image: kergrit/08-blog-moderation
 ---
 apiVersion: v1
 kind: Service

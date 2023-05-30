@@ -7,7 +7,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: kergrit/07-blog-client
+    - image: kergrit/08-blog-client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -15,7 +15,7 @@ build:
         manual:
           - src: 'src/**/*.js'
             dest: .
-    - image: kergrit/07-blog-posts
+    - image: kergrit/08-blog-posts
       context: posts
       docker:
         dockerfile: Dockerfile
@@ -23,7 +23,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: kergrit/07-blog-comments
+    - image: kergrit/08-blog-comments
       context: comments
       docker:
         dockerfile: Dockerfile
@@ -31,7 +31,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: kergrit/07-blog-query
+    - image: kergrit/08-blog-query
       context: query
       docker:
         dockerfile: Dockerfile
@@ -39,7 +39,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: kergrit/07-blog-event-bus
+    - image: kergrit/08-blog-event-bus
       context: event-bus
       docker:
         dockerfile: Dockerfile
@@ -47,7 +47,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: kergrit/07-blog-moderation
+    - image: kergrit/08-blog-moderation
       context: moderation
       docker:
         dockerfile: Dockerfile
