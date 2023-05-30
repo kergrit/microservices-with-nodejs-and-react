@@ -31,9 +31,15 @@ spec:
 ```
 
 ```sh
-// Testing 
-cd posts && docker build -t kergrit/06-blog-posts:simple . && docker push kergrit/06-blog-posts:simple
-cd infra/k8s-simple && kubectl apply -f posts-pod.yaml && kubectl get pods
+// Docker build image 
+cd posts && \
+docker build -t kergrit/06-blog-posts:simple . && \
+docker push kergrit/06-blog-posts:simple \
+
+// K8s Pod 
+cd infra/k8s-simple && \
+kubectl apply -f posts-pod.yaml && \
+kubectl get pods
 ```
 
 *Pod Term - Docker world vs Kubernetes world*
@@ -65,8 +71,10 @@ spec:
 ```
 
 ```sh
-// Testing 
-cd infra/k8s-simple && kubectl apply -f posts-deployment.yaml && kubectl get deployments
+// K8s Deployment 
+cd infra/k8s-simple && \
+kubectl apply -f posts-deployment.yaml && \
+kubectl get deployments
 ```
 
 *Service Term*
@@ -91,7 +99,7 @@ spec:
     targetPort: 4000
 ```
 ```sh
-// Testing
+// K8s Service
 cd infra/k8s-simple && \
 kubectl apply -f posts-deployment.yaml && \
 kubectl apply -f posts-service-nodeport.yaml && \
