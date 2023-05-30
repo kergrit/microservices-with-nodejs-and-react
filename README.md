@@ -10,3 +10,4 @@ This repo is example collections for learn about microservices design developeme
 - [05-blog-run-service-with-docker](05-blog-run-service-with-docker) Dockerizing blog app
 - [06-blog-kubernetes-101](06-blog-kubernetes-101) Orchestration blog app with Kubernetes 101
 - [07-blog-k8s-loadbalancer-ingress](07-blog-k8s-loadbalancer-ingress) Orchestration blog app with K8s with Load Balancer, Ingress Controller and TLS/SSL
+- [08-blog-k8s-skaffold](08-blog-k8s-skaffold) Automate workflow locally by skaffold start from build codebase updated image till orchestration k8s
