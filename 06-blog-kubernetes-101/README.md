@@ -1,8 +1,17 @@
 ## 06-blog-kubernetes-101
 
-In last section we will learn about simple orchesting blog app with `Kubernetes` or `k8s` in short.
+In last section we will learn about simple orchestration blog app with `Kubernetes` or `k8s` in short.
 
 Start section with simple knowledge what is kubernetes and how it work.
+
+Before start you must install `minikube` for orchestration docker with K8s
+https://minikube.sigs.k8s.io/docs/start/
+
+```sh
+# Install minikub on macOS with homebrew
+brew install minikube && \
+minikube start
+```
 
 ## What is Kubernetes (Kube or K8S)
 *What is K8S?*
