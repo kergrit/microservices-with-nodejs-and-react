@@ -101,4 +101,13 @@ docker exec -it {containerID} {command}
 # Docker print out logs from the given container
 docker logs {containerID}
 
+# Lists docker all image and filtered
+docker images
+docker images | grep {imageName}
+
+# Delete docker image
+docker rmi {imageName|imageID}
+
+# Delete docker image with multiples filtered
+docker rmi $(docker images | grep {dockerName})
 ```
