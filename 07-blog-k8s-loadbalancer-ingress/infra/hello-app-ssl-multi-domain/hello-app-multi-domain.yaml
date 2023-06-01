@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-a-app
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: hello-a
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-a
+    spec:
+      containers:
+      - name: hello-a
+        image: "gcr.io/google-samples/hello-app:2.0"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-a-service
+  namespace: default
+  labels:
+    app: hello-a
+spec:
+  type: ClusterIP
+  selector:
+    app: hello-a
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-b-app
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: hello-b
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-b
+    spec:
+      containers:
+      - name: hello-b
+        image: "gcr.io/google-samples/hello-app:2.0"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-b-service
+  namespace: default
+  labels:
+    app: hello-b
+spec:
+  type: ClusterIP
+  selector:
+    app: hello-b
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+--- 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: multi-app-ingress
+  namespace: default
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - hello-a.app
+    secretName: hello-a-app-tls
+  - hosts:
+    - hello-b.app
+    secretName: hello-b-app-tls
+  rules:
+  - host: "hello-a.app"
+    http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: hello-a-service
+              port:
+                number: 80
+  - host: "hello-b.app"
+    http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: hello-b-service
+              port:
+                number: 80

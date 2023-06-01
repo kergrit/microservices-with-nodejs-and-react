@@ -81,5 +81,5 @@ Open web browser http://blog.app/posts
 > When you access blog.app K8s will redirect to `https://` by default for secured. Next you will apply `tls/ssl` with article [How To Configure Ingress TLS/SSL Certificates in Kubernetes](https://devopscube.com/configure-ingress-tls-kubernetes/)
 
 #
-For more informations and examples [hello-app-ssl](infra/hello-app-ssl)
+For more informations and examples [hello-app-ssl](infra/hello-app-ssl) and [hello-app-ssl-mulitple-domain](infra/hello-app-ssl-multi-domain)
 #
