@@ -179,6 +179,7 @@ kubectl get deployments
 
 // Service
 cd infra/k8s-simple && \
+kubectl apply -f posts-service-nodeport.yaml && \
 kubectl apply -f posts-service-clusterip.yaml && \
 kubectl apply -f event-bus-service-clusterip.yaml && \
 kubectl get services
