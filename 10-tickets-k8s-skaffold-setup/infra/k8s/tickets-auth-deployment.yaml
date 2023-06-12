@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tickets-auth-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tickets-auth
+  template:
+    metadata:
+      labels:
+        app: tickets-auth
+    spec:
+      containers:
+      - name: tickets-auth
+        image: kergrit/tickets-auth        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tickets-auth-service
+spec:
+  selector:
+    app: tickets-auth
+  ports:
+  - port: 3000
+    targetPort: 3000
+
