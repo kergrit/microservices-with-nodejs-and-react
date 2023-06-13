@@ -43,22 +43,22 @@ Define micro service to manipulate entity on system
 - tickets related to *Ticket* entity
   | Method      | Routes                  | Body                                 | Purpose                         |
   |-------------|-------------------------|--------------------------------------|---------------------------------|  
-  | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
+  | -        | -       | -  | -          |
   
 - orders related to *Order* entity
   | Method      | Routes                  | Body                                 | Purpose                         |
   |-------------|-------------------------|--------------------------------------|---------------------------------|
-  | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
+  | -        | -       | -  | -          |
   
 - expiration
   | Method      | Routes                  | Body                                 | Purpose                         |
   |-------------|-------------------------|--------------------------------------|---------------------------------|
-  | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
+  | -        | -       | -  | -          |
   
 - payments related to *Charge* entity
   | Method      | Routes                  | Body                                 | Purpose                         |
   |-------------|-------------------------|--------------------------------------|---------------------------------|  
-  | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
+  | -        | -       | -  | -          |
 
 ### Events
 Defined any events occured on system related to entity
