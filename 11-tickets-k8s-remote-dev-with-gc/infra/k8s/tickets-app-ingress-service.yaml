@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: default
+  name: tickets-app-ingress
+  labels:
+    name: tickets-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"  
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - tickets.app
+    secretName: tickets-app-tls
+  rules:
+  - host: tickets.app    
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/api/users/?(.*)"
+        backend:
+          service:
+            name: tickets-auth-service
+            port: 
+              number: 3000      

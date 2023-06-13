@@ -1,0 +1,17 @@
+apiVersion: skaffold/v4beta5
+kind: Config
+manifests:
+  rawYaml:
+    - ./infra/k8s/*
+build:
+  googleCloudBuild:
+    projectId: ydm-devops    
+  artifacts:
+    - image: gcr.io/ydm-devops/tickets-auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
