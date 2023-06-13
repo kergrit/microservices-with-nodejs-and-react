@@ -11,3 +11,7 @@ This repo is example collections for learn about microservices design developeme
 - [06-blog-kubernetes-101](06-blog-kubernetes-101) Orchestration blog app with Kubernetes 101
 - [07-blog-k8s-loadbalancer-ingress](07-blog-k8s-loadbalancer-ingress) Orchestration blog app with K8s with Load Balancer, Ingress Controller and TLS/SSL
 - [08-blog-k8s-skaffold](08-blog-k8s-skaffold) Automate workflow locally by skaffold start from build codebase updated image till orchestration k8s
+#
+- [09-tickets-overview](09-tickets-overview) NextJS and Express(Typescript) marketplace e-shop tickets on microservice design and development in depth
+- [10-tickets-k8s-skaffold-setup](10-tickets-k8s-skaffold-setup) Setting up project with K8s, nginx ingress and Skaffold
+- [11-tickets-k8s-remote-dev-with-gc](11-tickets-k8s-remote-dev-with-gc) *OPTIONAL* - Settingup project with remote development on Google Cloud with GKE, Cloud Build, Cloud Container Registry
