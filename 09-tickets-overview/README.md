@@ -33,38 +33,32 @@ Define data structures (entity) on system
 ### Services
 Define micro service to manipulate entity on system
 - auth related to *User* entity
-  |             |                         |                                      |                                 |
+  | Method      | Routes                  | Body                                 | Purpose                         |
   |-------------|-------------------------|--------------------------------------|---------------------------------|
-  | **Method**  | **Routes**              | **Body**                             | **Purpose**                     |
   | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
   | POST        | /api/users/signin       | { email: string, password: string }  | Sign in to an existing account  |
   | POST        | /api/users/signout      | {}                                   | Sign out                        |
   | GET         | /api/users/currentuser  | -                                    | Return info about the user      |
-  |             |                         |                                      |                                 |
+  
 - tickets related to *Ticket* entity
-  |             |                         |                                      |                                 |
-  |-------------|-------------------------|--------------------------------------|---------------------------------|
-  | **Method**  | **Routes**              | **Body**                             | **Purpose**                     |
+  | Method      | Routes                  | Body                                 | Purpose                         |
+  |-------------|-------------------------|--------------------------------------|---------------------------------|  
   | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
-  |             |                         |                                      |                                 |
+  
 - orders related to *Order* entity
-  |             |                         |                                      |                                 |
+  | Method      | Routes                  | Body                                 | Purpose                         |
   |-------------|-------------------------|--------------------------------------|---------------------------------|
-  | **Method**  | **Routes**              | **Body**                             | **Purpose**                     |
   | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
-  |             |                         |                                      |                                 |
+  
 - expiration
-  |             |                         |                                      |                                 |
+  | Method      | Routes                  | Body                                 | Purpose                         |
   |-------------|-------------------------|--------------------------------------|---------------------------------|
-  | **Method**  | **Routes**              | **Body**                             | **Purpose**                     |
   | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
-  |             |                         |                                      |                                 |
+  
 - payments related to *Charge* entity
-  |             |                         |                                      |                                 |
-  |-------------|-------------------------|--------------------------------------|---------------------------------|
-  | **Method**  | **Routes**              | **Body**                             | **Purpose**                     |
+  | Method      | Routes                  | Body                                 | Purpose                         |
+  |-------------|-------------------------|--------------------------------------|---------------------------------|  
   | POST        | /api/users/signup       | { email: string, password: string }  | Sign up for an account          |
-  |             |                         |                                      |                                 |
 
 ### Events
 Defined any events occured on system related to entity
